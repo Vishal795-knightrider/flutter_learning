@@ -39,7 +39,7 @@ class _InkWellFixExampleState extends State<InkWellFixExample> {
      appBar: AppBar(title: const Text("InkWell Fix")),
      body: Center(
        child: Material(
-         color: Colors.orange, // ✅ Give color here
+         color: Colors.pink, // ✅ Give color here
          borderRadius: BorderRadius.circular(12),
          child: InkWell(
            borderRadius: BorderRadius.circular(12),
