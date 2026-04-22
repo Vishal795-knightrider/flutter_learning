@@ -1,0 +1,3 @@
+import 'dart:async';import 'package:flutter/material.dart';
+class SplashScreen extends StatefulWidget{const SplashScreen({super.key});State<SplashScreen> createState()=>_S();}
+class _S extends State<SplashScreen>{void initState(){super.initState();Timer(const Duration(seconds:2),()=>Navigator.pushReplacementNamed(context,'/home'));}Widget build(BuildContext c)=>const Scaffold(body:Center(child:Text('BMI Calculator')));}

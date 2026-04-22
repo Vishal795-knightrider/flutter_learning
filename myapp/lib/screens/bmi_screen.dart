@@ -1,0 +1,5 @@
+import 'package:flutter/material.dart';import '../widgets/input_field.dart';import '../widgets/custom_button.dart';import '../utils/bmi_logic.dart';import 'result_screen.dart';
+class BmiScreen extends StatefulWidget{const BmiScreen({super.key});State<BmiScreen> createState()=>_B();}
+class _B extends State<BmiScreen>{final h=TextEditingController(),w=TextEditingController(),a=TextEditingController();
+void calc(){if(h.text.isEmpty||w.text.isEmpty)return;final bmi=BmiLogic.calculate(double.parse(w.text),double.parse(h.text));Navigator.push(context,MaterialPageRoute(builder:(_)=>ResultScreen(bmi:bmi)));}
+Widget build(BuildContext c)=>Scaffold(appBar:AppBar(title:const Text('BMI')),body:Padding(padding:const EdgeInsets.all(12),child:Column(children:[InputField(controller:h,label:'Height'),SizedBox(height:8),InputField(controller:w,label:'Weight'),SizedBox(height:8),InputField(controller:a,label:'Age'),SizedBox(height:8),CustomButton(text:'Calculate',onTap:calc)])));}

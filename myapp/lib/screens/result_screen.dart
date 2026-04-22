@@ -1,0 +1,3 @@
+import 'package:flutter/material.dart';import '../utils/bmi_logic.dart';
+class ResultScreen extends StatelessWidget{final double bmi;const ResultScreen({super.key,required this.bmi});
+Widget build(BuildContext c)=>Scaffold(appBar:AppBar(title:const Text('Result')),body:Center(child:Column(mainAxisSize:MainAxisSize.min,children:[Text(bmi.toStringAsFixed(1),style:TextStyle(fontSize:40)),Text(BmiLogic.category(bmi)),Text(BmiLogic.message(bmi))])));}
