@@ -1,0 +1,49 @@
+import 'package:flutter/material.dart';
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.amberAccent,
+      ),
+
+      body: SizedBox(
+        height: 300,
+
+        child: ListView(
+          padding: const EdgeInsets.all(10),
+          scrollDirection: Axis.horizontal,
+
+          children: [
+            Container(
+              color: Colors.amber,
+              margin: const EdgeInsets.symmetric(horizontal: 5),
+              width: 50,
+            ),
+
+            Container(
+              color: Colors.amber,
+              margin: const EdgeInsets.symmetric(horizontal: 5),
+              width: 50,
+            ),
+
+            Container(
+              color: Colors.amber,
+              margin: const EdgeInsets.symmetric(horizontal: 5),
+              width: 50,
+            ),
+
+            Container(
+              color: Colors.amber,
+              margin: const EdgeInsets.symmetric(horizontal: 5),
+              width: 50,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
